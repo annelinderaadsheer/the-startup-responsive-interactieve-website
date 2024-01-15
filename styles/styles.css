@@ -1,0 +1,152 @@
+:root {
+  --primay-color-blue: #003cfb;
+  --accent-color-blue: #001863;
+  --primay-color-black: #1e2432;
+  --accent-color-white: #fefefe;
+  --primay-color-grey: #6b7280;
+  --paragraph-font: 400 16px/1.5 "Inter", sans-serif;
+  --paragraph-font-bold: 700 16px/1.5 "Inter", sans-serif;
+  --heading-font: 700 20px/1.5 "Mark Pro", sans-serif;
+}
+
+/* Some default styling first */
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--accent-color-white);
+  background: var(--primay-color-blue);
+}
+
+header img {
+  width: 100px;
+}
+
+.intro {
+  padding: 48px 0 48px 24px;
+  font-size: 1.5rem;
+}
+
+h1 {
+  margin: 2;
+  font-family: var(--heading-font);
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+  line-height: 1.1;
+  font-family: var(--paragraph-font);
+}
+
+p {
+  margin: 0;
+  font-family: var(--heading-font);
+}
+
+a {
+  color: var(--accent-color-blue);
+}
+
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Article styling */
+article {
+  color: var(--primay-color-black);
+  background: var(--accent-color-white);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.24s ease-in-out;
+}
+
+article:hover {
+  transform: scale(1.023);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 25px 50px -12px;
+}
+
+article > * {
+  padding: 20px;
+}
+
+article figure {
+  margin: 50;
+  padding: 50;
+  width: 100px;
+  height: 5vh;
+}
+
+article footer {
+  text-align: right;
+  border-top: 1px solid var(--accent-color-blue);
+}
+
+h2 a {
+  color: var(--primay-color-black);
+  text-decoration: none;
+}
+
+time {
+  margin: 0;
+  color: var(--primay-color-grey);
+  font-size: 1rem;
+}
+
+.lees-meer {
+  color: var(--accent-color-blue);
+  text-decoration: none;
+}
+
+.lees-meer:hover,
+.lees-meer:active {
+  text-decoration: underline;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: masonry;
+}
+
+@media screen and (min-width: 680px) {
+  /* set the grid to 2 columns */
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* set the grid to 2 columns */
+  .grid {
+    gap: 18px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* set the grid to 2 columns */
+  .grid {
+    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .intro {
+    text-align: center;
+  }
+
+  /* set the grid to 3 columns */
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
