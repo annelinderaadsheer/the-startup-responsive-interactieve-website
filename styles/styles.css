@@ -9,7 +9,7 @@
   --heading-font: 700 20px/1.5 "Mark Pro", sans-serif;
 }
 
-/* Some default styling first */
+/* Styling */
 body {
   font-family: "Lato", sans-serif;
   font-size: 1.2rem;
@@ -112,28 +112,34 @@ time {
 /* Grid */
 .grid {
   display: grid;
-  gap: 12px;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: masonry;
+  gap: 12px; /* De ruimte tussen de grid-items (12 pixels in dit geval) */
+  grid-template-columns: repeat(
+    1,
+    1fr
+  ); /* Wordt één kolom gemaakt met een fractie (1fr) van de beschikbare ruimte. */
+  grid-template-rows: masonry; /* Hier worden de hoogtes van de rijen automatisch aangepast op basis van alle inhoud */
 }
 
 @media screen and (min-width: 680px) {
-  /* set the grid to 2 columns */
+  /* Zet grid op 2 kolommen. */
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Doordat het zich herhaalt, krijg je even brede kolommen */
   }
 }
 
 @media screen and (min-width: 768px) {
-  /* set the grid to 2 columns */
+  /* Zet grid op 2 kolommen. */
   .grid {
-    gap: 18px;
+    gap: 18px; /* De ruimte tussen de kolommen en rijen. */
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  /* set the grid to 2 columns */
+  /* Zet grid op 2 kolommen. */
   .grid {
     gap: 24px;
     grid-template-columns: repeat(3, 1fr);
@@ -141,11 +147,12 @@ time {
 }
 
 @media screen and (min-width: 1600px) {
+  /* Selecteert alle 'intro' elementen binnen de media query. */
   .intro {
     text-align: center;
   }
 
-  /* set the grid to 3 columns */
+  /* Zet grid op 3 kolommen. */
   .grid {
     grid-template-columns: repeat(4, 1fr);
   }
