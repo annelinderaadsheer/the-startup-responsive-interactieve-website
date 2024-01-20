@@ -97,7 +97,7 @@ h2 a {
   text-decoration: none;
 }
 
-time {
+article p {
   margin: 0;
   color: var(--primay-color-grey);
   font-size: 1rem;
