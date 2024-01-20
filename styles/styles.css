@@ -1,12 +1,15 @@
 :root {
-  --primay-color-blue: #003cfb;
-  --accent-color-blue: #001863;
-  --primay-color-black: #1e2432;
-  --accent-color-white: #fefefe;
-  --primay-color-grey: #6b7280;
-  --paragraph-font: 400 16px/1.5 "Inter", sans-serif;
-  --paragraph-font-bold: 700 16px/1.5 "Inter", sans-serif;
-  --heading-font: 700 20px/1.5 "Mark Pro", sans-serif;
+  /* Colors */
+  --primay-color-blue: #003cfb; /* Hoofdkleur blauw */
+  --accent-color-blue: #001863; /* Accentkleur blauw */
+  --primay-color-black: #1e2432; /* Hoofdkleur zwart */
+  --accent-color-white: #fefefe; /* Accentkleur wit */
+  --primay-color-grey: #6b7280; /* Hoofdkleur grijs */
+
+  /* Fonts */
+  --paragraph-font: 400 16px/1.5 "Inter", sans-serif; /* Normaal lettertype alinea's */
+  --paragraph-font-bold: 700 16px/1.5 "Inter", sans-serif; /* Vetgedrukt lettertype alinea's */
+  --heading-font: 700 20px/1.5 "Mark Pro", sans-serif; /* Vetgedrukt lettertype koppen */
 }
 
 /* Styling */
@@ -72,6 +75,7 @@ article:hover {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 25px 50px -12px;
 }
 
+/* Voor alle elemten binnen het article */
 article > * {
   padding: 20px;
 }
@@ -83,10 +87,10 @@ article figure {
   height: 5vh;
 }
 
-article footer {
+/* article footer {
   text-align: right;
   border-top: 1px solid var(--accent-color-blue);
-}
+} */
 
 h2 a {
   color: var(--primay-color-black);
@@ -102,6 +106,8 @@ time {
 .lees-meer {
   color: var(--accent-color-blue);
   text-decoration: none;
+  text-align: right;
+  border-top: 1px solid var(--accent-color-blue);
 }
 
 .lees-meer:hover,
