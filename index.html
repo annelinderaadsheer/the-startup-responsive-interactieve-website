@@ -1,60 +1,3 @@
-<!-- <html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Van Ons portaal</title>
-    <link rel="stylesheet" href="./styles/styles.css" />
-  </head>
-  <body>
-    <div class="container">
-      <header class="intro">
-        <img src="./assets/Logo - VO.png" alt="Van Ons logo" />
-        <h1>VAN ONS klantenportaal</h1>
-        <p>Laten we samen bouwen aan uw website!</p>
-      </header>
-
-      <section class="grid">
-        <article class="card-clickable">
-          <header>
-            <h2><a class="card-action">Fase 1 | Opzet</a></h2>
-            <time>Verwachtte opleverdatum: 00/00/00</time>
-          </header>
-          <figure>
-            <img src="assets/Analyseren icon.png" alt="Analyseren icon" />
-          </figure>
-          <main>
-            <h3>Aanpak Analysefase</h3>
-            <p>
-              In de analysefase inventariseren we wat er moet gebeuren om uw
-              taak uit te voeren en formuleren we een aantal uitgangspunten waar
-              uw ontwerp aan moet voldoen.
-            </p>
-          </main>
-          <footer>
-            <span class="lees-meer">Lees meer</span>
-          </footer>
-        </article>
-
-        <article class="card-clickable">
-          <header>
-            <h2><a class="card-action">Fase 2 | Design</a></h2>
-            <time>Verwachtte opleverdatum: 00/00/00</time>
-          </header>
-          <figure>
-            <img src="assets/Ontwerpen icon.png" alt="Ontwerpen icon" />
-          </figure>
-          <main>
-            <h3>Aanpak Ontwerpfase</h3>
-            <p>
-              Nu wordt het tijd om te kijken hoe het resultaat eruit zou kunnen
-              zien.
-            </p>
-          </main>
-          <footer>
-            <span class="lees-meer">Lees meer</span>
-          </footer>
-        </article> -->
-
 <!DOCTYPE html>
 <html lang="nl">
   <head>
@@ -62,91 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Van Ons portaal</title>
     <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="./scripts/script.js" defer></script>
   </head>
   <body>
+    <!-- NAVIGATIE -->
     <div class="container">
-      <header class="intro">
+      <header id="top" class="navbar">
         <img src="./assets/Logo-VO.png" alt="Logo van VO" />
         <h1>VAN ONS klantenportaal</h1>
-        <p>Laten we samen bouwen aan uw website!</p>
+        <div class="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
       </header>
 
       <section class="grid">
         <article class="card-clickable">
           <h2><a class="card-action">Fase 1 | Opzet</a></h2>
-          <p>Verwachtte opleverdatum: 00/00/00</p>
-          <figure>
-            <img src="assets/Analyseren-icon.png" alt="Analyseren icon" />
-          </figure>
-          <h3>Aanpak Analysefase</h3>
+          <!-- <p>Verwachtte opleverdatum: 00/00/00</p> -->
+          <!-- <figure> -->
+          <img src="assets/Analyseren-icon.png" alt="Analyseren icon" />
+          <!-- </figure> -->
+          <!-- <h3>Aanpak Opzetfase</h3> -->
           <p>
-            In de analysefase inventariseren we wat er moet gebeuren om uw taak
+            In de opzetfase inventariseren we wat er moet gebeuren om uw taak
             uit te voeren en formuleren we een aantal uitgangspunten waar uw
             ontwerp aan moet voldoen.
           </p>
           <hr />
-          <span class="lees-meer">Lees meer</span>
+          <span class="ontdek-fase">Ontdek fase</span>
         </article>
 
         <article class="card-clickable">
           <h2><a class="card-action">Fase 2 | Design</a></h2>
-          <p>Verwachtte opleverdatum: 00/00/00</p>
-          <figure>
-            <img src="assets/Ontwerpen-icon.png" alt="Ontwerpen icon" />
-          </figure>
-          <h3>Aanpak Ontwerpfase</h3>
+          <!-- <p>Verwachtte opleverdatum: 00/00/00</p> -->
+          <!-- <figure> -->
+          <img src="assets/Ontwerpen-icon.png" alt="Ontwerpen icon" />
+          <!-- </figure> -->
+          <!-- <h3>Aanpak Designfase</h3> -->
           <p>
             Nu wordt het tijd om te kijken hoe het resultaat eruit zou kunnen
             zien.
           </p>
           <hr />
-          <span class="lees-meer">Lees meer</span>
+          <span class="ontdek-fase">Ontdek fase</span>
         </article>
 
         <article class="card-clickable">
           <h2><a class="card-action">Fase 3 | Development</a></h2>
-          <p>Verwachtte opleverdatum: 00/00/00</p>
-          <figure>
-            <img src="assets/Bouwen-icon.png" alt="Bouwen icon" />
-          </figure>
-          <h3>Aanpak Bouwfase</h3>
+          <!-- <p>Verwachtte opleverdatum: 00/00/00</p> -->
+          <!-- <figure> -->
+          <img src="assets/Bouwen-icon.png" alt="Bouwen icon" />
+          <!-- </figure> -->
+          <!-- <h3>Aanpak Developmentfase</h3> -->
           <p>
             In de bouwfase realiseren we de beslissingen uit de ontwerpfase in
             HTML, CSS en JS.
           </p>
           <hr />
-          <span class="lees-meer">Lees meer</span>
+          <span class="ontdek-fase">Ontdek fase</span>
         </article>
 
         <article class="card-clickable">
           <h2><a class="card-action">Fase 4 | Testen</a></h2>
-          <p>Verwachtte opleverdatum: 00/00/00</p>
-          <figure>
-            <img src="assets/Testen-icon.png" alt="Testen icon" />
-          </figure>
-          <h3>Aanpak Testfase</h3>
+          <!-- <p>Verwachtte opleverdatum: 00/00/00</p> -->
+          <!-- <figure> -->
+          <img src="assets/Testen-icon.png" alt="Testen icon" />
+          <!-- </figure> -->
+          <!-- <h3>Aanpak Testfase</h3> -->
           <p>
             In de testfase controleren we of de aanpassingen werken zoals
             bedoeld. Dit kan een technische-test zijn, maar ook een test met
             gebruikers.
           </p>
           <hr />
-          <span class="lees-meer">Lees meer</span>
+          <span class="ontdek-fase">Ontdek fase</span>
         </article>
 
         <article class="card-clickable">
           <h2><a class="card-action">Fase 5 | Opleveren</a></h2>
-          <p>Verwachtte opleverdatum: 00/00/00</p>
-          <figure>
-            <img src="assets/Integreren-icon.png" alt="Testen icon" />
-          </figure>
-          <h3>Aanpak Integratiefase</h3>
+          <!-- <p>Verwachtte opleverdatum: 00/00/00</p> -->
+          <!-- <figure> -->
+          <img src="assets/Integreren-icon.png" alt="Testen icon" />
+          <!-- </figure> -->
+          <!-- <h3>Aanpak Integratiefase</h3> -->
           <p>
-            In de integratiefase voeren we alle aanpassingen door voor het
-            perfecte eindresultaat.
+            In de opleverfase voeren we alle aanpassingen door voor het perfecte
+            eindresultaat.
           </p>
           <hr />
-          <span class="lees-meer">Lees meer</span>
+          <span class="ontdek-fase">Ontdek fase</span>
         </article>
       </section>
     </div>

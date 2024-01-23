@@ -1,10 +1,10 @@
 :root {
   /* Colors */
-  --primay-color-blue: #003cfb; /* Hoofdkleur blauw */
+  --primary-color-blue: #003cfb; /* Hoofdkleur blauw */
   --accent-color-blue: #001863; /* Accentkleur blauw */
-  --primay-color-black: #1e2432; /* Hoofdkleur zwart */
+  --primary-color-black: #000000; /* Hoofdkleur zwart */
   --accent-color-white: #fefefe; /* Accentkleur wit */
-  --primay-color-grey: #6b7280; /* Hoofdkleur grijs */
+  --primary-color-grey: #cacaca; /* Hoofdkleur grijs */
 
   /* Fonts */
   --paragraph-font: 400 16px/1.5 "Inter", sans-serif; /* Normaal lettertype alinea's */
@@ -17,17 +17,13 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 1.2rem;
   line-height: 1.5;
-  color: var(--accent-color-white);
-  background: var(--primay-color-blue);
+  color: var(--primary-color-black);
+  background: var(--primary-color-grey);
+  margin: 0;
 }
 
 header img {
   width: 100px;
-}
-
-.intro {
-  padding: 48px 0 48px 24px;
-  font-size: 1.5rem;
 }
 
 h1 {
@@ -55,6 +51,11 @@ a {
   max-width: 1800px;
   margin: 0 auto;
   padding: 0 15px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(1, 1fr);
+  /* Optioneel: als je de items binnen de grid-container wilt centreren */
+  justify-items: center;
 }
 
 img {
@@ -63,11 +64,12 @@ img {
 
 /* Article styling */
 article {
-  color: var(--primay-color-black);
+  color: var(--primary-color-black);
   background: var(--accent-color-white);
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.24s ease-in-out;
+  position: relative;
 }
 
 article:hover {
@@ -80,72 +82,73 @@ article > * {
   padding: 20px;
 }
 
-article figure {
-  margin: 50;
-  padding: 50;
-  width: 100px;
-  height: 5vh;
+article img {
+  margin: 5;
+  padding: 5;
+  width: 25%;
+  height: auto;
+  max-width: 100%;
+  display: block;
 }
 
-/* article footer {
-  text-align: right;
-  border-top: 1px solid var(--accent-color-blue);
-} */
-
 h2 a {
-  color: var(--primay-color-black);
+  color: var(--primary-color-black);
   text-decoration: none;
 }
 
 article p {
   margin: 0;
-  color: var(--primay-color-grey);
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: var(--primary-color-grey);
   font-size: 1rem;
 }
 
-.lees-meer {
+.ontdek-fase {
   color: var(--accent-color-blue);
   text-decoration: none;
   text-align: right;
-  border-top: 1px solid var(--accent-color-blue);
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  color: var(--accent-color-blue);
+  text-decoration: none;
+  text-align: left;
 }
 
-.lees-meer:hover,
-.lees-meer:active {
+.ontdek-fase:hover,
+.ontdek-fase:active {
   text-decoration: underline;
+}
+
+article hr {
+  margin: 25px auto;
+  width: 80%;
+  border: none;
+  border-top: 1px dashed #333;
 }
 
 /* Grid */
 .grid {
   display: grid;
-  gap: 12px; /* De ruimte tussen de grid-items (12 pixels in dit geval) */
-  grid-template-columns: repeat(
-    1,
-    1fr
-  ); /* Wordt één kolom gemaakt met een fractie (1fr) van de beschikbare ruimte. */
-  grid-template-rows: masonry; /* Hier worden de hoogtes van de rijen automatisch aangepast op basis van alle inhoud */
+  gap: 12px;
+  grid-template-columns: repeat(1, 1fr);
 }
 
 @media screen and (min-width: 680px) {
-  /* Zet grid op 2 kolommen. */
   .grid {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* Doordat het zich herhaalt, krijg je even brede kolommen */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width: 768px) {
-  /* Zet grid op 2 kolommen. */
   .grid {
-    gap: 18px; /* De ruimte tussen de kolommen en rijen. */
+    gap: 18px;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  /* Zet grid op 2 kolommen. */
   .grid {
     gap: 24px;
     grid-template-columns: repeat(3, 1fr);
@@ -153,13 +156,93 @@ article p {
 }
 
 @media screen and (min-width: 1600px) {
-  /* Selecteert alle 'intro' elementen binnen de media query. */
-  .intro {
+  .navbar {
     text-align: center;
   }
 
-  /* Zet grid op 3 kolommen. */
   .grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color-blue);
+  }
+
+  .nav-menu.show-nav-menu {
+    display: flex;
+  }
+}
+
+/* Navigatie Styling */
+
+.navbar {
+  background-color: var(--primary-color-blue);
+  padding: 20px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+
+.bar {
+  background-color: var(--primary-color-black);
+  height: 3px;
+  width: 25px;
+  margin: 6px 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu li {
+  display: inline;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-menu a:hover {
+  color: #00f;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color-blue);
+  }
+
+  .nav-menu.show-nav-menu {
+    display: flex;
   }
 }
