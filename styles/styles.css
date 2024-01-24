@@ -7,55 +7,57 @@
   --primary-color-grey: #cacaca; /* Hoofdkleur grijs */
 
   /* Fonts */
-  --paragraph-font: 400 16px/1.5 "Inter", sans-serif; /* Normaal lettertype alinea's */
+  --paragraph-font: 400 16px/1.5 "Lato", sans-serif; /* Normaal lettertype alinea's */
   --paragraph-font-bold: 700 16px/1.5 "Inter", sans-serif; /* Vetgedrukt lettertype alinea's */
   --heading-font: 700 20px/1.5 "Mark Pro", sans-serif; /* Vetgedrukt lettertype koppen */
 }
 
-/* Styling */
+/* Opmaak */
 body {
-  font-family: "Lato", sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  color: var(--primary-color-black);
-  background: var(--primary-color-grey);
-  margin: 0;
+  font-family: "Lato", sans-serif; /* Lettertype */
+  font-size: 1.2rem; /* Tekstgrootte */
+  line-height: 1.5; /* Regelhoogte */
+  color: var(--primary-color-black); /* Tekstkleur */
+  background: var(--primary-color-grey); /* Achtergrondkleur */
+  margin: 0; /* Geen marges toegevoegd aan de pagina */
 }
 
 header img {
-  width: 100px;
+  width: 100px; /* Breedte van het logo */
 }
 
 h1 {
-  margin: 2;
+  margin: 2; /* Ruimte rondom de h1 */
   font-family: var(--heading-font);
   font-size: 2rem;
 }
 
 h2 {
   font-size: 1.7rem;
-  line-height: 1.1;
+  line-height: 1.1; /* Regelhoogte voor h2 */
   font-family: var(--paragraph-font);
 }
 
 p {
-  margin: 0;
+  margin: 0; /* Geen marges toegevoegd aan alinea's */
   font-family: var(--heading-font);
 }
 
 a {
-  color: var(--accent-color-blue);
+  color: var(--accent-color-blue); /* Kleur van hyperlinks */
 }
 
 .container {
-  max-width: 1800px;
+  max-width: 1800px; /* Maximale breedte van de container */
   margin: 0 auto;
   padding: 0 15px;
   display: grid;
   gap: 12px;
-  grid-template-columns: repeat(1, 1fr);
-  /* Optioneel: als je de items binnen de grid-container wilt centreren */
-  justify-items: center;
+  grid-template-columns: repeat(
+    1,
+    1fr
+  ); /* Verdeelt de grid-columns in één kolom */
+  justify-items: center; /* Centreert de inhoud van grid binnen de kolommen */
 }
 
 img {
@@ -67,11 +69,12 @@ article {
   color: var(--primary-color-black);
   background: var(--accent-color-white);
   border-radius: 8px;
-  cursor: pointer;
+  cursor: pointer; /* Verander de cursor naar een handje */
   transition: all 0.24s ease-in-out;
   position: relative;
 }
 
+/* Wanneer de muis over het article hovert */
 article:hover {
   transform: scale(1.023);
   box-shadow: rgba(0, 0, 0, 0.5) 0px 25px 50px -12px;
@@ -82,12 +85,13 @@ article > * {
   padding: 20px;
 }
 
+/* Afbeelding binnen het article */
 article img {
   margin: 5;
   padding: 5;
   width: 25%;
   height: auto;
-  max-width: 100%;
+  max-width: 100%; /* Maximale breedte */
   display: block;
 }
 
@@ -100,27 +104,27 @@ article p {
   margin: 0;
   margin-bottom: 10px;
   margin-top: 10px;
-  color: var(--primary-color-grey);
+  color: var(--accent-color-blue);
   font-size: 1rem;
 }
 
 .ontdek-fase {
   color: var(--accent-color-blue);
   text-decoration: none;
-  text-align: right;
+  text-align: left;
   position: absolute;
   bottom: 5px;
   left: 0;
   color: var(--accent-color-blue);
-  text-decoration: none;
-  text-align: left;
 }
 
+/* Wanneer de muis over ontdek-fase hovert */
 .ontdek-fase:hover,
 .ontdek-fase:active {
   text-decoration: underline;
 }
 
+/* Horizontale ijn binnen article */
 article hr {
   margin: 25px auto;
   width: 80%;
@@ -131,23 +135,30 @@ article hr {
 /* Grid */
 .grid {
   display: grid;
-  gap: 12px;
-  grid-template-columns: repeat(1, 1fr);
+  gap: 12px; /* Tussenruimte tussen de elementen */
+  grid-template-columns: repeat(
+    1,
+    1fr
+  ); /* Grid in één kolom van gelijke grootte */
 }
 
+/* Media query voor schermen met een minimum breedte van 680 pixels */
 @media screen and (min-width: 680px) {
+  /* Bij 680 pixels of meer, twee kolommen van gelijke grootte */
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Media query voor schermen met een minimum breedte van 768 pixels */
 @media screen and (min-width: 768px) {
   .grid {
-    gap: 18px;
+    gap: 18px; /* Tussenruimte */
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Media query voor schermen met een minimum breedte van 1200 pixels */
 @media screen and (min-width: 1200px) {
   .grid {
     gap: 24px;
@@ -155,6 +166,7 @@ article hr {
   }
 }
 
+/* Media query voor schermen met een minimum breedte van 1600 pixels */
 @media screen and (min-width: 1600px) {
   .navbar {
     text-align: center;
@@ -165,6 +177,7 @@ article hr {
   }
 }
 
+/* Media query voor schermen met een maximum breedte van 768 pixels */
 @media screen and (max-width: 768px) {
   .nav-menu {
     display: none;
@@ -176,8 +189,16 @@ article hr {
     background-color: var(--primary-color-blue);
   }
 
+  /* Navigatie menu */
   .nav-menu.show-nav-menu {
     display: flex;
+  }
+}
+
+/* Hamburger menu */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
   }
 }
 
@@ -218,13 +239,14 @@ article hr {
 
 .nav-menu a {
   text-decoration: none;
-  color: #fff;
+  color: var(--primary-color-grey);
   font-size: 18px;
+  font-family: var(--paragraph-font-bold);
   transition: color 0.3s ease-in-out;
 }
 
 .nav-menu a:hover {
-  color: #00f;
+  color: var(--primary-color-black);
 }
 
 @media (max-width: 768px) {
