@@ -9,8 +9,8 @@
 <img width="571" alt="Scherm­afbeelding 2024-01-25 om 11 07 28" src="https://github.com/annelinderaadsheer/the-startup-responsive-interactieve-website/assets/144004885/ce59c424-a27b-4e65-b2aa-61b0def61808">
 
 ## Inhoudsopgave
-[1. Beschrijving]()  
-[2. Kenmerken]()  
+1. Beschrijving 
+2. Kenmerken  
 
 ## Beschrijving
 Van Ons is een design en developmentbureau op het gebied van apps platforms en websites. Klanten vertrouwen hun projecten toevoegen aan Van Ons en de resultaten zijn vaak indrukwekkend.
